@@ -1,0 +1,38 @@
+<div class="container">
+  <app-alert [message]="message" *ngIf="message" (close)="onClose()"></app-alert>
+  <h1>Compass</h1>
+  <form  (ngSubmit)="generate(f)" #f="ngForm">
+        <div class="form-group">
+            <label for="startDate">Start Date</label>
+            <input type="date" id="startDate" class="form-control" name="startDate" [ngModel]="yesterday" ngModel required>
+        </div>
+        <div class="form-group">
+            <label for="endDate">End Date</label>
+            <input type="date" id="endDate" class="form-control"  name="endDate" [ngModel]="today" required>
+        </div>
+            <br>
+            <button type="submit" [disabled]="disable">Start Animation</button>
+            <br>
+        
+
+        
+
+        <!-- <div class="arrow">
+          <span class="rotate">&#8593;</span>
+        </div> -->
+        
+    
+</form>
+<div class="arrow">
+  <!-- <span id="span" class="material-icons md-48 rotate">call_made</span> -->
+<span id="span" class="rotate">  &#8593;</span>
+
+
+</div>
+
+<p style="text-align: center;">{{date}}</p>
+<p style="text-align: center;">{{speed}}</p>
+
+
+</div>
+
